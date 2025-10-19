@@ -14,7 +14,7 @@ const Home = async () => {
     <>
       <HeroSection />
       <div className="text-center my-4">
-        <h2 className="text-3xl font-bold text-white mb-2">Anime OnGoing</h2>
+        <h2 className="text-3xl font-bold text-white mb-2">Anime Yang Terbaru</h2>
         <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto rounded-full"></div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 my-12 mx-4 md:mx-24 gap-6">
@@ -23,13 +23,16 @@ const Home = async () => {
         ))}
       </div>
       <div className="text-center my-4">
-        <h2 className="text-3xl font-bold text-white mb-2">Anime Complete</h2>
+        <h2 className="text-3xl font-bold text-white mb-2">Anime Yang Tamat</h2>
         <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto rounded-full"></div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 my-12 mx-4 md:mx-24 gap-6">
         {animeComplete.map((anime, key) => (
           <AnimeCard title={anime.title} key={key} image={anime.poster} releaseDay={anime.release_day} slug={anime.slug} rating={anime.rating} episodeCount={anime.episode_count} lastReleaseDate={anime.last_release_date} />
         ))}
+      </div>
+      <div className="text-center my-4">
+        <p className="text-white">Selamat Menonton</p>
       </div>
     </>
   );
