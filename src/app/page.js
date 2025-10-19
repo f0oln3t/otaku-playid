@@ -32,7 +32,7 @@ const Home = async () => {
         ))}
       </div>
       <div className="text-center my-4">
-        <p className="text-white">Selamat Menonton</p>
+        <p className="text-white">Selamat Menonton Wibu-Wibu nolep</p>
       </div>
     </>
   );
