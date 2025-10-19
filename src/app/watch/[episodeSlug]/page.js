@@ -194,8 +194,8 @@ export default function WatchPage({ params }) {
         <div className="bg-neutral-900 p-4 rounded-lg mb-8">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 truncate">{episodeData.episode}</h1>
           <div className="flex justify-between items-center">
-            {animeSlug && (
-              <Link href={`/anime/${animeSlug}`} className="text-sm text-pink-400 hover:underline">
+            {episodeData.anime && episodeData.anime.slug && (
+              <Link href={`/anime/${episodeData.anime.slug}`} className="text-sm text-pink-400 hover:underline">
                 Kembali ke detail anime
               </Link>
             )}
@@ -251,4 +251,3 @@ export default function WatchPage({ params }) {
     </div>
   );
 }
-
