@@ -7,18 +7,6 @@ import { ChevronLeftIcon, ChevronRightIcon, PlayCircleIcon } from '@heroicons/re
 // --- DIUBAH: Komponen LoadingSpinner diganti dengan Skeleton ---
 function WatchPageSkeleton() {
   return (
-     <div className="min-h-screen bg-neutral-900 text-white">
-      <div className="container mx-auto px-4 py-8">
-        <div className="mb-8">
-           <Link href="/" className="text-pink-400 hover:underline mb-4 inline-flex items-center gap-2">
-             <ArrowLeftIcon className="h-5 w-5" />
-             {'Kembali ke Beranda'}
-           </Link>
-          <h1 className="text-3xl md:text-4xl font-bold">
-            {'Hasil Pencarian untuk: '}
-            <span className="text-pink-500">{keyword}</span>
-          </h1>
-        </div>
     <div className="min-h-screen bg-black text-white animate-pulse">
       <div className="container mx-auto px-4 py-8">
         
@@ -207,7 +195,7 @@ export default function WatchPage({ params }) {
           <h1 className="text-2xl md:text-3xl font-bold mb-2 truncate">{episodeData.episode}</h1>
           <div className="flex justify-between items-center">
             {episodeData.anime && episodeData.anime.slug && (
-              <Link href={`/anime/${episodeData.anime.slug}`} className="text-sm text-pink-400 hover:underline">
+              <Link href={`/anime/${episodeData.anime}`} className="text-sm text-pink-400 hover:underline">
                 Kembali ke detail anime
               </Link>
             )}
