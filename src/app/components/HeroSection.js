@@ -14,10 +14,10 @@ const HeroSection = () => {
           bg-gradient-to-b from-[#2E2F40] to-[#1A1A29] 
           order-2 md:order-1">
           <h1 className="text-2xl md:text-4xl font-bold text-white mb-3 md:mb-4 relative z-20">
-            JujuOtaku
+            OtakuPlay
           </h1>
           <p className="text-neutral-400 mb-4 md:mb-6 text-sm md:text-base relative z-20">
-            JujuOtaku adalah situs anime gratis tanpa iklan untuk menonton anime gratis
+            Donate biar webnya ga ngelag🗿
           </p>
 
           {/* Search Bar */}
@@ -42,8 +42,8 @@ const HeroSection = () => {
               </svg>
             </button>
 
-            <Link href={'https://sociabuzz.com/kaell22'} target='_blank' className="bg-blue-500 text-center text-white px-6 py-2 md:py-3 rounded-full">
-              Donate JujuOtaku
+            <Link href={'https://saweria.co/fathanmc'} target='_blank' className="bg-blue-500 text-center text-white px-6 py-2 md:py-3 rounded-full">
+              Donate OtakuPlay
             </Link>
           </div>
         </div>
@@ -55,8 +55,8 @@ const HeroSection = () => {
           <Image
             width={500}
             height={500}
-            src="/images/rem.gif"
-            alt="Anime Character"
+            src="/images/logo.gif"
+            alt="Logo OtakuPlay"
             className="absolute inset-0 w-full h-full object-cover"
             priority={true}
           />
