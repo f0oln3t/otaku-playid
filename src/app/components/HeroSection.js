@@ -42,7 +42,7 @@ const HeroSection = () => {
               </svg>
             </button>
 
-            <Link href={'https://saweria.co/fathanmc'} target='_blank' className="bg-blue-500 text-center text-white px-6 py-2 md:py-3 rounded-full">
+            <Link href={'https://trakteer.id/patan._mc'} target='_blank' className="bg-blue-500 text-center text-white px-6 py-2 md:py-3 rounded-full">
               Donate OtakuPlay
             </Link>
           </div>
