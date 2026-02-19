@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Panel Pterodactyl</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white min-h-screen flex items-center justify-center">  <div class="bg-slate-800 p-8 rounded-2xl shadow-2xl w-full max-w-lg">
+    <h1 class="text-3xl font-bold text-center mb-2">Order Panel Pterodactyl</h1>
+    <img src="https://files.catbox.moe/ib2fqt.png"/>
+    <p class="text-center text-slate-400 mb-6">Isi data untuk order panel hosting</p><!-- ORDER FORM -->
+<form id="orderForm" class="space-y-4">
+  <div>
+    <label class="block mb-1">Nama</label>
+    <input id="nama" required type="text" class="w-full p-3 rounded-xl bg-slate-700 outline-none focus:ring-2 focus:ring-blue-500">
+  </div>
+
+  <div>
+    <label class="block mb-1">Username Panel</label>
+    <input id="username" required type="text" class="w-full p-3 rounded-xl bg-slate-700 outline-none focus:ring-2 focus:ring-blue-500">
+  </div>
+
+  <div>
+    <label class="block mb-1">Nomor WhatsApp</label>
+    <input id="nomor" required type="tel" placeholder="628xxxx" class="w-full p-3 rounded-xl bg-slate-700 outline-none focus:ring-2 focus:ring-blue-500">
+  </div>
+
+  <div>
+    <label class="block mb-1">Pilih RAM</label>
+    <select id="ram" class="w-full p-3 rounded-xl bg-slate-700 outline-none focus:ring-2 focus:ring-blue-500">
+      <option>SUKI</option>
+      <option>BASIC</option>
+      <option>PREMIUM</option>
+      <option>SULTAN</option>
+    </select>
+  </div>
+
+  <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 transition p-3 rounded-xl font-semibold">
+    Lanjut ke Pembayaran
+  </button>
+</form>
+
+<!-- QRIS PAYMENT -->
+<div id="paymentBox" class="hidden mt-6 text-center">
+  <h2 class="text-xl font-semibold mb-2">Scan QRIS Untuk Bayar</h2>
+  <img src="qris.png" class="mx-auto rounded-xl mb-3 max-h-64" alt="QRIS" />
+  <p class="text-slate-400 text-sm">Setelah transfer, klik tombol dibawah untuk kirim data ke WhatsApp dan kirim bukti TF di chat.</p>
+
+  <button id="sendWA" class="mt-4 w-full bg-green-600 hover:bg-green-700 p-3 rounded-xl font-semibold">
+    Kirim Data ke WhatsApp
+  </button>
+</div>
+
+  </div><script>
+
+let orderData = null;
+
+const orderForm = document.getElementById('orderForm');
+const sendWA = document.getElementById('sendWA');
+
+// NOMOR WA ADMIN
+const adminWA = "6285293393972";
+
+orderForm.addEventListener('submit', function(e){
+  e.preventDefault();
+
+  orderData = {
+    nama: document.getElementById('nama').value,
+    username: document.getElementById('username').value,
+    nomor: document.getElementById('nomor').value,
+    ram: document.getElementById('ram').value,
+    orderId: 'ORD' + Date.now(),
+    waktu: new Date().toLocaleString()
+  };
+
+  document.getElementById('paymentBox').classList.remove('hidden');
+});
+
+sendWA.addEventListener('click', function(){
+
+  const pesan = `ORDER PANEL PTERODACTYL%0A%0A` +
+  `Order ID: ${orderData.orderId}%0A` +
+  `Waktu: ${orderData.waktu}%0A%0A` +
+  `Nama: ${orderData.nama}%0A` +
+  `Username: ${orderData.username}%0A` +
+  `No WA User: ${orderData.nomor}%0A` +
+  `RAM: ${orderData.ram}%0A%0A` +
+  `NOTE:%0AKirim bukti transfer setelah pesan ini.`;
+
+  window.open(`https://wa.me/${adminWA}?text=${pesan}`, '_blank');
+
+});
+
+</script></body>
+</html>
