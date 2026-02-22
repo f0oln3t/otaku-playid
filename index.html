@@ -1,3 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhantomHost - Hosting Panel Pterodactyl</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Smooth Infinite Testimoni Scroll */
+    @keyframes scrollTestimoni {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .testimoni-track {
+      display: flex;
+      width: max-content;
+      animation: scrollTestimoni 30s linear infinite;
+    }
+
+    .testimoni-track:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-white overflow-x-hidden">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full bg-slate-950/80 backdrop-blur border-b border-slate-800 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <img src="https://files.catbox.moe/ib2fqt.png" class="h-10" />
+
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="#pricing" class="hover:text-blue-400 transition">Paket</a>
+      <a href="#testimoni" class="hover:text-blue-400 transition">Testimoni</a>
+      <a href="order.html" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Order</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32">
+  <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+    Hosting Panel Pterodactyl
+  </h1>
+
+  <p class="mt-6 text-slate-400 max-w-xl">
+    Server stabil menggunakan SSD NVMe, performa tinggi, latency rendah, dan cocok untuk bot, game server, dan hosting project kamu.
+  </p>
+
+  <div class="mt-8 flex gap-4 flex-wrap justify-center">
+    <a href="#pricing" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl font-semibold transition">
+      Lihat Paket
+    </a>
+    <a href="order.html" class="bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-xl font-semibold transition">
+      Order Sekarang
+    </a>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="py-20 px-6 bg-slate-900">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+
+    <div class="bg-slate-800 p-8 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-xl font-semibold mb-2">99% Uptime</h3>
+      <p class="text-slate-400">Server stabil dan selalu online untuk kebutuhan hosting kamu.</p>
+    </div>
+
+    <div class="bg-slate-800 p-8 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-xl font-semibold mb-2">SSD NVMe</h3>
+      <p class="text-slate-400">Storage super cepat dengan teknologi NVMe generasi terbaru.</p>
+    </div>
+
+    <div class="bg-slate-800 p-8 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-xl font-semibold mb-2">Anti Lag</h3>
+      <p class="text-slate-400">Performa stabil untuk bot WhatsApp, Minecraft server, dan hosting aplikasi.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="py-20 px-6">
+  <h2 class="text-3xl font-bold text-center mb-12">Paket Hosting</h2>
+
+  <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+    <!-- SUKI -->
+    <div class="bg-slate-800 p-8 rounded-2xl border border-blue-600 shadow-xl hover:scale-105 transition">
+      <h3 class="text-2xl font-bold mb-2">SUKI</h3>
+      <p class="text-blue-400 text-xl font-semibold mb-6">Rp 2.000</p>
+
+      <ul class="space-y-2 text-slate-300">
+        <li>✔ 1 GB RAM</li>
+        <li>✔ 1 Core CPU</li>
+        <li>✔ 1 GB NVMe Storage</li>
+        <li>✔ 1 Ports</li>
+        <li>✔ 1 Database</li>
+      </ul>
+
+      <a href="order.html" class="block mt-6 text-center bg-blue-600 hover:bg-blue-700 py-3 rounded-xl font-semibold transition">Order</a>
+    </div>
+
+    <!-- BASIC -->
+    <div class="bg-slate-800 p-8 rounded-2xl border border-blue-600 shadow-xl hover:scale-105 transition">
+      <h3 class="text-2xl font-bold mb-2">BASIC</h3>
+      <p class="text-blue-400 text-xl font-semibold mb-6">Rp 5.000</p>
+
 <ul class="space-y-2 text-slate-300">
         <li>✔ 2 GB RAM</li>
         <li>✔ 1 Core CPU</li>
